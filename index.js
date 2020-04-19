@@ -4,6 +4,17 @@ const routes        = require('./routes');
 const paht          = require('path');
 const bodyParser    = require('body-parser');
 
+// Iniciarlizar la BD
+const db = require('./config/db');
+
+// Importar el modelo
+require('./models/Proyectos');
+
+// Conectar con MySql
+db.sync()
+    .then(() => console.log('Conectado al servidor'))
+    .catch(error => console.log(`Error al conectar: ${error}`));
+
 // crear una app de express 
 const app = express();
 
