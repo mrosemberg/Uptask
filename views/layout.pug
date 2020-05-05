@@ -17,10 +17,10 @@ html(lang="en")
                         span +
                 .panel.lista-proyectos
                     ul#proyectos.proyectos
-                        li
-                            a(href="") Diseño de Tienda Virtual
-                        li
-                            a(href="") Diseño de Tienda Virtual
-                        li  
-                            a(href="") Diseño de Tienda Virtual
+                        if(proyectos.length)
+                            each proyecto in proyectos
+                                li
+                                    a(href=`proyectos/${proyecto.url}`)= proyecto.nombre
             block contenido
+
+            pre= vardump(proyectos)

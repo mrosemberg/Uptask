@@ -2,6 +2,7 @@ const Sequelize   = require('sequelize');
 const db          = require('../config/db');
 const slug        = require('slug');
 const shortId   = require('shortid');
+
 const Proyectos       = db.define('proyectos', {
     id : {
         type          : Sequelize.INTEGER,

@@ -22,5 +22,8 @@ module.exports = () => {
         .escape(),
     proyectosController.nuevoProyecto);
 
+    // Listar proyecto
+    router.get('/proyecto/:url', proyectosController.proyectoPorUrl);
+
     return router;
 };
